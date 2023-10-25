@@ -1,0 +1,58 @@
+body{
+    background-image: url("../images/bg4.jpg");
+    display: flex;
+    flex-direction: column;
+  }
+
+ 
+
+  #clienteTable {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 5%;
+  
+  }
+  
+  
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #293038;
+    color: #fff;
+  }
+  
+  td{
+    background-color: #fff;
+  }
+  
+  
+  
+  /* Estilo para el título h2 *//* Estilo para el título h2 */
+  button,
+  h2 {
+    color: #f8f7fa;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    border-left: 5px solid #072f5a; /* Agrega un borde a la izquierda */
+    padding-left: 10px; /* Espacio entre el texto y el borde izquierdo */
+
+    border-end-end-radius: 10px;
+  }
+  
+  h3 {
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  
+  form input[type="submit"]{
+    margin-top: 15px;
+  }

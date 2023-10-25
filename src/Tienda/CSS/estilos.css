@@ -1,0 +1,179 @@
+*{
+    margin: 0;/*sin margen*/
+    padding: 0;/*no hay líenes visibles*/
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;/*es lo que se saca de fuente google fonts*/
+}
+
+body{
+    background-image: url(../images/fondo2.jpg);/*imagen de fondo*/
+    background-size: cover;/*se adapte al tamaño*/
+    background-repeat: no-repeat;/*Que no se repita la imagen*/
+    background-position: center;/*para que abarque el ancho y el alto de la página*/
+    background-attachment: fixed;/*Se adapta a toda la pantalla*/
+}
+/*Diseño de los formularios*/
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;/*para que se centre despues de todo*/
+    margin-top: 12%;/*para que el contenido baje mas hacia abajo*/
+}
+
+.contenedor_todo{
+    /*Para la caja*/
+    width: 100%;/*ancho*/
+    max-width: 800px;/*El ancho máximo sea de unos 800px*/
+    margin: auto;/*es para que la caja se vea centrado*/
+    position: relative;/*Para que los elementos de posicione*/
+}
+/*Caja tracera*/
+.caja_trasera{
+    width: 100%;/**/
+    padding: 10px 20px;/*10px de arriba hacia abajo y 20px de izquierda a derecha*/
+    display: flex;/*es para los objetos del formulario esten uno de tra del otro*/
+    justify-content: center;/*el contenido este centrado*/
+    -webkit-backdrop-filter: blur(10px);/**/
+    backdrop-filter: blur(10px);/*es para la transparencia*/
+    background-color: rgba(36, 77, 117, 0.5);
+    border-radius: 10px;
+
+}
+
+.caja_trasera div{
+    margin: 100px 40px;/*es para aplicar margen 100px y de ancho 40px*/
+    color: white;
+    transition: all 500ms;/*es la transicion de tipo de movimiento*/
+}
+
+
+.caja_trasera div p,/*la etique "p"*/
+.caja_trasera button{
+    margin-top: 30px;/*es para el espaciado del texto y boton*/
+}
+
+.caja_trasera div h3{/*Etique H3 es los títulos*/
+    font-weight: 400;/*es para el grosor del título h3*/
+    font-size: 26px;/*tamaño del texto*/
+}
+
+.caja_trasera div p{
+    font-size: 16px;/*tamaño del texto*/
+    font-weight: 300;/*es para el grosor del título h3*/
+}
+
+.caja_trasera button{
+    padding: 10px 40px;/*un alto de 10px y un espaciado del costado 40px*/
+    border: 2px solid #fff;/*borde*/
+    font-size: 14px;/*tamano del texto*/
+    background: transparent;/*Transparente*/
+    font-weight: 600;/*el grosor del texto*/
+    cursor: pointer;/*la posición del cursos*/
+    color: white;/*color del texto de los botones*/
+    outline: none;/*para quilar la línea negra al rededor del botón*/
+    transition: all 300ms;/*es un efecto hover se sensillo*/
+}
+/*Aplicar un efecto hover sensillo*/
+.caja_trasera button:hover{
+    background: #fff;/*efecto al botón al hacer clic*/
+    color: #46A2FD;/*efecto al texto del botón*/
+}
+
+/*Formularios*/
+
+.contenedor_login-register{
+    display: flex;/*posicione de manera vertical*/
+    align-items: center;/*formulario posicionamos al centro*/
+    width: 100%;/**/
+    max-width: 380px;/*El ancho del formulario*/
+    position: relative;
+    top: -185px;/*el formulario se posicione en el centro*/
+    left: 10px;/*es el espacio del formluario*/
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+input{
+    border-radius: 10px;
+}
+
+.contenedor_login-register form{
+    width: 100%;/**/
+    padding: 80px 20px;/**/
+    background: white;/*Color*/
+    position: absolute;
+    border-radius: 20px;/*Aplicar borde a los formlarios primeros*/
+}
+/*Para el titulo registro formulario */
+.contenedor_login-register form h2{
+    font-size: 30px;/*tamaño del texto*/
+    text-align: center;/**/
+    margin-bottom: 20px;/*el espaciado los imput del texto*/
+    color: #46A2FD;
+}
+.contenedor_login-register form input{
+    width: 100%;
+    margin-top: 20px;/*espaciado entre los input*/
+    padding: 10px;/*espaciado*/
+    border: none;/*sin borde*/
+    background: #F2F2F2;/*color a los input*/
+    font-size: 16px;/*tamaño del texto*/
+    outline: none;/*quitar el borde*/
+}
+/*trabajar con el registar*/
+.contenedor_login-register form button{
+    padding: 10px 40px;
+    margin-top: 40px;/*el margen*/
+    border: none;/*Botón sin bordes*/
+    font-size: 14px;/*tamaño de texto */
+    background: #46A2FD;/*color*/
+    font-weight: 600;/**/
+    cursor: pointer;/*Es para darle clic al botón*/
+    color: white;/*color al texto*/
+    outline: none;/*Eliminar la línea negra del botón*/
+}
+/*Trabajar con el formulario Logín*/
+.formulario_login{
+    opacity: 1;/**/
+    display: block;/**/
+}
+/*es para que desaparezca el formulario
+ y se meustre el otro formulario*/
+/*Formulario de registro*/
+.formulario_register{
+    display: none;
+}
+/*Trabajando con el Responsive Desing*/
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja_trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;/*ponerlo en columna*/
+        margin: auto;
+    }
+
+    .caja_trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor_login-register{
+        top: -10px;/*Posicion hacia arriba*/
+        left: -5px;/*una posición hacia la izquierda*/
+        margin: auto;
+    }
+
+    .contenedor_login-register form{
+        position: relative;/*es para que se ponga en una posición mejor */
+    }
+}
