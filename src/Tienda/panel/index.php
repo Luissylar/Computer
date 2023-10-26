@@ -1,4 +1,4 @@
+   
 <?php
-header("Location: menu.php");
-exit;
+    include "inventario.php";
 ?>
