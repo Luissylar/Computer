@@ -13,7 +13,7 @@
             <li><a href="compras.php">Compras</a></li>
             <li><a href="usuario.php">Usuarios</a></li>
             <li><a href="inventario.php">Inventario</a></li>
-            <li><a href="configuracion.php">Salir</a></li>
+            <li><a href="../index.php">Salir</a></li>
         </ul>
     </nav>
 </body>
