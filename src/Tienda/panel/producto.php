@@ -22,8 +22,10 @@
         <?php
             include '../../datos/conexion_be.php';
 
-            // Realiza una consulta para seleccionar los clientes desde la base de datos
-            $query = "SELECT * FROM productos";
+            // Realiza una consulta para seleccionar los productos con el nombre del usuario
+            $query = "SELECT productos.id_producto, productos.producto, productos.fecha_registro, productos.descripcion, usuarios.nombres AS nombre_usuario
+                    FROM productos
+                    INNER JOIN usuarios ON productos.id_usuario = usuarios.id_usuario";
             $result = $conexion->query($query);
 
             echo "<table border='1' id='clienteTable'>";
@@ -35,7 +37,7 @@
                     echo "<th>ID Producto</th>";
                     echo "<th>Nombre</th>";
                     echo "<th>Fecha de Registro</th>";
-                    echo "<th>Descripcion</th>";
+                    echo "<th>Descripción</th>";
                     echo "<th>Nombre de usuario</th>";
                     echo "</tr>";
 
@@ -46,11 +48,11 @@
                         echo "<td>" . $row['producto'] . "</td>";
                         echo "<td>" . $row['fecha_registro'] . "</td>";
                         echo "<td>" . $row['descripcion'] . "</td>";
-                        echo "<td>" . $row['id_usuario'] . "</td>";
+                        echo "<td>" . $row['nombre_usuario'] . "</td>";
                         echo "</tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='9'>No se encontraron clientes.</td></tr>";
+                    echo "<tr><td colspan='9'>No se encontraron productos.</td></tr>";
                 }
 
                 // Liberar los resultados
@@ -63,7 +65,8 @@
 
             // Cerrar la conexión
             $conexion->close();
-        ?>
+            ?>
+
     </body>
 </html>
 
