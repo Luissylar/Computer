@@ -11,6 +11,7 @@
     <header>
         <img src="src/Tienda/images/logo.jpg" alt="logo" >
         <p>Las mejores ofertas en equipos de cómputo.</p>
+        <p>precios HOT siempre.</p>
         <button class="inicio" ><a href="src/Tienda" class="IS"> INICIAR SECION</a></button>
     </header>
 
@@ -19,7 +20,8 @@
         <div id="buscador-input">
             <label for="name-producto">Ingrese un dato a buscar</label>
             <input type="text" name="name-producto" id="name-producto" placeholder="Ingresa palabra clave">
-            <button>Buscar</button>
+            <div><button>Buscar</button></div>
+            
         </div>
 
         <div class="product">
