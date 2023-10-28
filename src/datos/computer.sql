@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3307
--- Tiempo de generación: 24-10-2023 a las 04:05:26
+-- Tiempo de generación: 28-10-2023 a las 22:45:50
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -44,7 +44,10 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id_cliente`, `dni`, `nombres`, `apellidos`, `correo`, `direccion`, `fecha_registro`, `puntos`, `rango`) VALUES
-(4, '73016189', 'Luis Fernando', 'Saldivar Leon', 'luisfsaldivarleon@gmail.com', 'av republica de chile b-15 santiago csuco', '2023-10-23 19:12:27', 0, 'usuario');
+(4, '73016189', 'Luis Fernando', 'Saldivar Leon', 'luisfsaldivarleon@gmail.com', 'av republica de chile b-15 santiago csuco', '2023-10-23 19:12:27', 0, 'usuario'),
+(5, '54557888', 'JESUS ADRIAN', 'QUISPE CHAMPI', 'JESUS@GMAIL.COM', 'AV. DE LA CULTURA 1005 SAN SEBASTIAN SOL DE ORO', '2023-10-28 15:35:06', 0, 'CLIENTE'),
+(6, '78415456', 'OLIVER', 'ROMERO CAMPOS', 'OLIVER@GMAIL.COM', 'AV. DE LA CULTURA 1005 SAN SEBASTIAN SOL DE ORO', '2023-10-28 15:36:06', 0, 'CLIENTE'),
+(7, '12345678', 'carlos', 'flores quispe', 'carlos@gmail.com', 'AV. DE LA CULTURA 1005 SAN SEBASTIAN SOL DE ORO', '2023-10-28 15:36:55', 0, 'CLIENTE');
 
 -- --------------------------------------------------------
 
@@ -70,7 +73,9 @@ CREATE TABLE `compras` (
 
 INSERT INTO `compras` (`id_compra`, `precio_unitario`, `cantidad`, `id_proveedor`, `fecha_compra`, `fecha_registro`, `id_usuario`, `total`, `id_producto`) VALUES
 (7, 20, 5, 3, '2023-10-24', '2023-10-23 19:31:41', 15, 100, 9),
-(8, 5, 10, 4, '2023-10-24', '2023-10-23 20:39:14', 15, 50, 10);
+(8, 5, 10, 4, '2023-10-24', '2023-10-23 20:39:14', 15, 50, 10),
+(9, 5, 20, 5, '2023-10-28', '2023-10-28 15:40:52', 16, 100, 20),
+(10, 10, 15, 4, '2023-10-28', '2023-10-28 15:41:30', 16, 150, 19);
 
 -- --------------------------------------------------------
 
@@ -111,7 +116,9 @@ CREATE TABLE `inventario` (
 
 INSERT INTO `inventario` (`id_inventario`, `id_producto`, `id_usuario`, `cantidad_disponible`, `fecha_actualizacion`) VALUES
 (2, 9, 15, 5, '2023-10-24 00:31:41'),
-(3, 10, 15, 10, '2023-10-24 01:39:14');
+(3, 10, 15, 10, '2023-10-24 01:39:14'),
+(4, 20, 16, 20, '2023-10-28 20:40:52'),
+(5, 19, 16, 15, '2023-10-28 20:41:30');
 
 -- --------------------------------------------------------
 
@@ -134,7 +141,17 @@ CREATE TABLE `productos` (
 INSERT INTO `productos` (`id_producto`, `producto`, `fecha_registro`, `descripcion`, `id_usuario`) VALUES
 (9, 'Mouse', '2023-10-23 18:54:30', 'control remoto', 15),
 (10, 'Teclado', '2023-10-23 19:29:41', 'teclado Gamer', 15),
-(11, 'Monitor', '2023-10-23 19:30:01', 'monitor de pc', 15);
+(11, 'Monitor', '2023-10-23 19:30:01', 'monitor de pc', 15),
+(12, 'laptop', '2023-10-28 15:27:56', 'latop pro economica', 15),
+(13, 'impresora', '2023-10-28 15:29:13', 'multifuncional', 15),
+(14, 'scanner', '2023-10-28 15:29:27', 'scaneo de hojas etc', 15),
+(15, 'altavoces', '2023-10-28 15:29:37', 'para pc y laptop', 15),
+(16, 'microfono', '2023-10-28 15:29:54', 'para hablar en pc o laptop', 15),
+(17, 'webcam', '2023-10-28 15:30:10', 'instalador para pc y laptop', 15),
+(18, 'cable de red', '2023-10-28 15:31:00', '', 15),
+(19, 'cable de red rj45', '2023-10-28 15:31:35', 'CAPACIDAD 100MGBITS', 15),
+(20, 'AUDIFONOS CON MICRO', '2023-10-28 15:33:58', '', 16),
+(21, 'AUDIFONOS CON CABLE', '2023-10-28 15:34:05', '', 16);
 
 -- --------------------------------------------------------
 
@@ -158,7 +175,10 @@ CREATE TABLE `proveedores` (
 
 INSERT INTO `proveedores` (`id_proveedor`, `nombre`, `ruc`, `direccion`, `telefono`, `encargado`, `id_estado`) VALUES
 (3, 'Itetnia sac', '20545454878867846', 'av republica de chile b-15 santiago csuco', '928632267', 'Jesus Lopez Romero', 1),
-(4, 'SOFTCONT', '20545454878867846', 'av republica de chile b-15 santiago csuco', '928632267', 'LUIS FERNANDO SALDIVAR LEON', 1);
+(4, 'SOFTCONT', '20545454878867846', 'av republica de chile b-15 santiago csuco', '928632267', 'LUIS FERNANDO SALDIVAR LEON', 1),
+(5, 'SENATI', '2045454878749797', 'AV. DE LA CULTURA 1005 SAN SEBASTIAN SOL DE ORO', '928456578', 'ROBERT HUALLPAYUNCA JIMENEZ', 1),
+(6, 'SEGETUC SRL', '2045454848799797', 'AV. DE LA CULTURA 1005 SANTIAGO WANCHAQ', '945789898', 'CARLOS HUARANCA QUISPE', 1),
+(7, 'TI COMPUTO', '204545484877777', 'VIRGEN CONCEPCION U-5', '928456578', 'TONY STARK ', 1);
 
 -- --------------------------------------------------------
 
@@ -205,7 +225,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nombres`, `apellidos`, `dni`, `telefono`, `correo`, `contrasena`, `fecha_registro`, `id_rol`, `direccion`, `id_estado`) VALUES
-(15, 'Luis Fernando', 'Saldivar Leon', '73016189', '928632267', 'luisfsaldivarleon@gmail.com', 'luis123', '2023-10-23 18:54:01', 2, 'av republica de chile b-15 santiago csuco', 1);
+(15, 'Luis Fernando', 'Saldivar Leon', '73016189', '928632267', 'luisfsaldivarleon@gmail.com', 'luis123', '2023-10-23 18:54:01', 2, 'av republica de chile b-15 santiago csuco', 1),
+(16, 'JAMES', 'CARREON PARIGUANA', '54557888', '928456578', 'JAMES@GMAIL.COM', 'JAMES123', '2023-10-28 15:33:16', 2, 'AV. DE LA CULTURA 1005 SAN SEBASTIAN SOL DE ORO', 1);
 
 -- --------------------------------------------------------
 
@@ -311,13 +332,13 @@ ALTER TABLE `venta`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_compra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `estado`
@@ -329,19 +350,19 @@ ALTER TABLE `estado`
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id_inventario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_inventario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `id_proveedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_proveedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -353,7 +374,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `venta`
