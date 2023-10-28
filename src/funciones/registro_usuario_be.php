@@ -29,6 +29,7 @@ if ($resultado === false) {
     if (mysqli_num_rows($resultado) > 0) {
         // El correo ya está registrado, puedes mostrar un mensaje de error o redirigir a una página de error.
         echo "El correo ya está registrado en la base de datos";
+        header('Location: ../Tienda/');
     } else {
         // El correo no está registrado, procede con la inserción.
         $query = "INSERT INTO usuarios (nombres, apellidos, dni, telefono, correo, contrasena, fecha_registro, id_rol, direccion, id_estado)
@@ -40,6 +41,7 @@ if ($resultado === false) {
             header('Location: ../Tienda');
         } else {
             echo "Error al registrar usuario: " . mysqli_error($conexion);
+            header('Location: ../Tienda/');
         }
     }
 }
