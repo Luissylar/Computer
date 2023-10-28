@@ -33,7 +33,8 @@
         include '../../datos/conexion_be.php';
 
         // Realiza una consulta para seleccionar los clientes desde la base de datos
-        $query = "SELECT * FROM proveedores";
+        $query = "SELECT p.id_proveedor, p.nombre, p.ruc, p.direccion, p.telefono, p.encargado, e.estado AS estado_nombre FROM proveedores p
+                LEFT JOIN estado e ON p.id_estado = e.id_estado"; // Asume que el campo en la tabla estados se llama "nombre"
         $result = $conexion->query($query);
 
         echo "<table border='1' id='clienteTable'>";
@@ -60,7 +61,7 @@
                     echo "<td>" . $row['direccion'] . "</td>";
                     echo "<td>" . $row['telefono'] . "</td>";
                     echo "<td>" . $row['encargado'] . "</td>";
-                    echo "<td>" . $row['id_estado'] . "</td>";
+                    echo "<td>" . $row['estado_nombre'] . "</td>"; // Muestra el nombre del estado
                     echo "</tr>";
                 }
             } else {
@@ -77,7 +78,7 @@
 
         // Cerrar la conexión
         $conexion->close();
-    ?>
+        ?>
 </body>
 </html>
 
