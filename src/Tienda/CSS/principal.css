@@ -96,7 +96,7 @@ h1 {
 
 #buscador-input{
     color: #f0f0f0;
-    width: 90%;
+    width: 95%;
     margin-left: 5%;
     display: flex;
     flex-direction: column;
@@ -106,7 +106,9 @@ h1 {
 #buscador-input input{
     height: 40px;
     border: none;
-    border-radius: 20px;
+    border-bottom: 4px solid rgb(117, 50, 114);
+    outline: none;
+    border-radius: 5px;
 }
 
 #buscador-input label{
@@ -115,16 +117,24 @@ h1 {
     margin-bottom: 10px;
 }
 
+#buscador-input div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #buscador-input button{
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 20px;
-    width: 100%;
+    width: 30%;
     border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 #buscador-input button:hover{
-    background-color: #dfce3b;
+    background-color: #c59a0b;
 }
 
 
