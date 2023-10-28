@@ -15,6 +15,13 @@
     </header>
 
     <div class="container">
+
+        <div id="buscador-input">
+            <label for="name-producto">Ingrese un dato a buscar</label>
+            <input type="text" name="name-producto" id="name-producto" placeholder="Ingresa palabra clave">
+            <button>Buscar</button>
+        </div>
+
         <div class="product">
             <img src="src/Tienda/images/inicio.jpg" alt="Computadora">
             <h2>Computadora de Alta Gama</h2>

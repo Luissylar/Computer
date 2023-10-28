@@ -91,3 +91,40 @@ h1 {
     width: 30%;
     height: 30%;
 }
+
+/*estilo para input busqueda*/
+
+#buscador-input{
+    color: #f0f0f0;
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+#buscador-input input{
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+#buscador-input label{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 10px;
+}
+
+#buscador-input button{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+}
+
+#buscador-input button:hover{
+    background-color: #dfce3b;
+}
+
+
